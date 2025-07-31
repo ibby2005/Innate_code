@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int s = a*a;
+        //int copy = s;
+        int l,rev=0;
+        while(a>0){
+            l=a%10;
+            a=a/10;
+            rev = rev*10+l;
+        }
+        int s1 = rev*rev;
+        int r=0,l1=0;
+        while(s1>0){
+            l1=s1%10;
+            s1=s1/10;
+            r = r*10 + l1;
+        }
+        //int o =copy;
+        if(r==s){
+            System.out.print("Adam Number");
+        }
+        else{
+            System.out.print("Not a adam number");
+        }
+            /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
